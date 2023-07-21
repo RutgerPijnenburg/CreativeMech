@@ -12,6 +12,7 @@ body {
   padding-top: 4.1rem;
   background-color: black;
 }
+
 .Navigation-Spacer {
   flex: 1;
   pointer-events: none;
