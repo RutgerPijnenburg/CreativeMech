@@ -15,14 +15,14 @@
       let frame = 1;
       let MouseDown = false;
 
-      addEventListener("mousedown", (event) => {
-        MouseDown = true;
-      });
-      addEventListener("mouseup", (event) => {
-        MouseDown = false;
-      });
+      // addEventListener("mousedown", (event) => {
+      //   MouseDown = true;
+      // });
+      // addEventListener("mouseup", (event) => {
+      //   MouseDown = false;
+      // });
       addEventListener("mousemove", (event) => {
-        if (MouseDown) {
+        // if (MouseDown) {
           mouseX = event.clientX;
           mouseY = event.clientY;
           // mouseY = event.clientY;
@@ -34,7 +34,7 @@
           document.getElementById(
             "js-Hero-Image"
           ).src = `/CreativeMech/Images/CreativeMech/CreativeMechBackground (${frame}).jpg`;
-        }
+        // }
       });
     </script>
   </head>
@@ -107,7 +107,7 @@
         alt=""
       />
       <div class="CaptionBox">
-        <p class="Caption"><nobr>drag to rotate</nobr></p>
+<!--         <p class="Caption"><nobr>drag to rotate</nobr></p> -->
         <p class="Caption2">
           <nobr>This is a render of the final result</nobr>
         </p>
