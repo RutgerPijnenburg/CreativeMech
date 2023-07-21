@@ -71,11 +71,6 @@ a {
   opacity: 60%;
 }
 
-.Navigation-Element a:hover {
-  text-decoration: none;
-  color: black;
-}
-
 .Hero-Button {
   padding: 5px;
   background-color: transparent;
