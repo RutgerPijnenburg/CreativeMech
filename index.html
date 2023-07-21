@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rutger Pijnenburg</title>
+    <link rel="stylesheet" href="/Portfolio2/CreativeMech/Styles/General.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      let frame = 1;
+      let MouseDown = false;
+
+      addEventListener("mousedown", (event) => {
+        MouseDown = true;
+      });
+      addEventListener("mouseup", (event) => {
+        MouseDown = false;
+      });
+      addEventListener("mousemove", (event) => {
+        if (MouseDown) {
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+          // mouseY = event.clientY;
+          frame = Math.round((mouseX / window.innerWidth) * 180);
+          if (frame < 1) {
+            frame = 1;
+          }
+
+          document.getElementById(
+            "js-Hero-Image"
+          ).src = `/Portfolio2/CreativeMech/Images/CreativeMech/CreativeMechBackground (${frame}).jpg`;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="Navigation" id="Navigation">
+      <div class="Logo">
+        <a href="https://rutgerpijnenburg.com" class="js-color"
+          >Rutger Pijnenburg</a
+        >
+      </div>
+      <div class="Navigation-Spacer"></div>
+      <div class="Navigation-Element">
+        <a href="https://rutgerpijnenburg.com#Identity" class="js-color"
+          >Identity</a
+        >
+      </div>
+      <div class="Navigation-Element">
+        <a href="https://rutgerpijnenburg.com#Vision" class="js-color"
+          >Vision</a
+        >
+      </div>
+      <div class="Navigation-Element">
+        <a href="https://rutgerpijnenburg.com#Projects" class="js-color"
+          >Projects</a
+        >
+      </div>
+      <div class="Navigation-Element">
+        <a href="https://rutgerpijnenburg.com#Development" class="js-color"
+          >Development</a
+        >
+      </div>
+      <div class="Navigation-Element">
+        <a href="mailto:r.a.pijnenburg@student.tue.nl"
+          ><button class="Hero-Button">Contact Me</button></a
+        >
+      </div>
+    </div>
+    <section>
+      <p class="Text">
+        Create mech DONE For creative mechanical design and engineering we had
+        to create a Rube Goldberg machine, 3D model, and perform stress
+        analysis. The course had me work mostly on technology and realization,
+        as we had to use calculations and models to show the feasibility of our
+        designs, the course itself gave me a few ways to check if the design was
+        good, or if it would break under stress. Going into this course I
+        thought it would be a lot of fun, as I personally like to 3D model,
+        however it went wrong right from the get-go, I was not able to step up
+        to people from whom I knew were good teammates and thus I was left with
+        a team in which the team work was sub-par to say the least, I had to do
+        most of the work (60% for a group of 4) and had to stay awake in the
+        evenings as the others needed my help to do their parts as well, we
+        failed this course the first time, after which it took me multiple weeks
+        to get everyone back together for the retake, for the retake I took the
+        lead, which made it so I had to do even more work, I also was not able
+        to voice my opinions to the group, though I did ask for a peer review,
+        which in the end did not do anything to how the teamwork went. I am not
+        quite sure what I should do in case something like this happens again, I
+        did try to voice my opinion, but teammates just accused each other
+        instead of also looking at themselves as well, I also went to the person
+        giving the course, but they did not take it that seriously. The only
+        thing I think I could have done is make sure that I would have gotten a
+        good team at the start, but that will not help me if I get into such a
+        situation again. One thing that I will do is ask for a meeting next
+        time, as my mails were just not taken seriously.
+      </p>
+      <img
+        id="js-Hero-Image"
+        draggable="false"
+        src="/Portfolio2/CreativeMech/Images/CreativeMech/CreativeMechBackground (1).jpg"
+        alt=""
+      />
+      <div class="CaptionBox">
+        <p class="Caption"><nobr>drag to rotate</nobr></p>
+        <p class="Caption2">
+          <nobr>This is a render of the final result</nobr>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
